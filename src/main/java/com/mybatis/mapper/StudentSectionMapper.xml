@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.StudentSectionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.StudentSection">
+        <id column="section_id" property="sectionId" />
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="duration" property="duration" />
+        <result column="is_free" property="isFree" />
+        <result column="book_id" property="bookId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        section_id, id, name, duration, is_free, book_id
+    </sql>
+
+</mapper>

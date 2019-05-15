@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.StudentBookMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.entity.StudentBook">
+        <id column="book_id" property="bookId" />
+        <result column="id" property="id" />
+        <result column="time" property="time" />
+        <result column="teacher" property="teacher" />
+        <result column="price" property="price" />
+        <result column="url" property="url" />
+        <result column="student_num" property="studentNum" />
+        <result column="book_img" property="bookImg" />
+        <result column="direction" property="direction" />
+        <result column="knowledge_point_num" property="knowledgePointNum" />
+        <result column="name" property="name" />
+        <result column="level" property="level" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        book_id, id, time, teacher, price, url, student_num, book_img, direction, knowledge_point_num, name, level
+    </sql>
+
+</mapper>
