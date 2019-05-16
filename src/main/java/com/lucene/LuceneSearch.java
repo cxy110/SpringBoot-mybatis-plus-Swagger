@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//关键词查询索引库
 public class LuceneSearch {
 //indexSearch 索引库的位置
   public static List lucenesearcher(String indexSearchpath, String keyword,String field) throws IOException {
