@@ -10,7 +10,7 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 /**
- * 自动生成代码
+ * mybatis-plus自动生成代码
  */
 public class MybatisPlusConfig {
   public static void main(String[] args) {
