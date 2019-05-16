@@ -27,7 +27,7 @@ public class SwaggerConfig {
   @Bean
   public Docket docket() {
     /*
-    所处环境的判断
+    项目所处环境的判断(生成或开发)
     */
     Profiles profile=Profiles.of("prod");
     Boolean isprod=environment.acceptsProfiles(profile);
