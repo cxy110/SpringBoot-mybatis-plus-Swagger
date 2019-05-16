@@ -14,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * lucene创建索引
+ * lucene创建索引库
  */
 public class LuceneIndex {
 
