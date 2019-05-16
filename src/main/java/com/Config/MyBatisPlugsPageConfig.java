@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * mybatis-plus 分页配置
+ * mybatis-plus 分页的配置
  */
 @Configuration
 public class MyBatisPlugsPageConfig {
