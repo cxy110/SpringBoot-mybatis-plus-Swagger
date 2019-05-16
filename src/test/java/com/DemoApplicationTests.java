@@ -1,5 +1,7 @@
 package com;
 
+import com.lucene.LuceneIndex;
+import com.lucene.LuceneSearch;
 import com.zxingUtil.QRcodeUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -38,5 +42,22 @@ public class DemoApplicationTests {
     String result=new QRcodeUtil().codeprise(file);
     System.out.println("解码后的结果是:"+result);
   }
+  //lucene生成索引库
+@Test
+  public  void creatIndex() throws IOException {
+  String indexSearch="D:\\indexCreat";
+  String BaseDocument="C:\\Users\\Administrator\\Downloads\\day14\\笔记";
+  new LuceneIndex(indexSearch,BaseDocument);
 
+}
+//从索引库中进行关键词查询
+@Test
+  public  void  getIndex() throws IOException {
+  String indexSearchpath="D:\\indexCreat";
+  String keyWord="笔记";
+  String field="filename";
+List list= LuceneSearch.lucenesearcher(indexSearchpath,keyWord,field);
+
+  System.out.println(list);
+}
 }
