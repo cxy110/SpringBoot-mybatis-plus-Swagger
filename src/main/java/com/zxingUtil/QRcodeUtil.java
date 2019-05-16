@@ -52,7 +52,7 @@ public class QRcodeUtil {
     map.put(EncodeHintType.ERROR_CORRECTION,ErrorCorrectionLevel.Q);
     //二维码外边距,二维码外边与图片外边的距离
     map.put(EncodeHintType.MARGIN,1);
-    //字符编码
+    //设置字符编码
     map.put(EncodeHintType.CHARACTER_SET,"utf-8");
     map.put(EncodeHintType.QR_VERSION,15);
    //BitMatrix中包含了一个Boolean[][]数组 ,BarcodeFormat参数为生成的类型
