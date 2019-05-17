@@ -56,8 +56,16 @@ public class DemoApplicationTests {
   String indexSearchpath="D:\\indexCreat";
   String keyWord="笔记";
   String field="filename";
-List list= LuceneSearch.lucenesearcher(indexSearchpath,keyWord,field);
-
+  LuceneSearch luceneSearch=new LuceneSearch();
+List list= luceneSearch.lucenesearcher(indexSearchpath,keyWord,field);
   System.out.println(list);
 }
+
+@Test
+public static void main(String[] args) {
+  int min=10;
+  int max=11;
+  System.out.println("{"+min+" TO "+max+"]");
 }
+}
+
