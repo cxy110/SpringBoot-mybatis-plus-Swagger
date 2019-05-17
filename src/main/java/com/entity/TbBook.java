@@ -1,7 +1,6 @@
 package com.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
@@ -26,7 +25,7 @@ public class TbBook extends Model<TbBook> {
 private static final long serialVersionUID=1L;
 
     @TableId(value = "id", type = IdType.AUTO)
-    @TableField(exist = false)
+  //  @TableField(exist = false)
     private Long id;
 
     private String name;
