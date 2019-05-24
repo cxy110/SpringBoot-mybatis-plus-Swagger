@@ -2,6 +2,7 @@ package com;
 
 import com.lucene.LuceneIndex;
 import com.lucene.LuceneSearch;
+import com.solr.SolrJManager;
 import com.zxingUtil.QRcodeUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -61,11 +62,30 @@ List list= luceneSearch.lucenesearcher(indexSearchpath,keyWord,field);
   System.out.println(list);
 }
 
+
+
+//测试solr添加
 @Test
-public static void main(String[] args) {
-  int min=10;
-  int max=11;
-  System.out.println("{"+min+" TO "+max+"]");
+  public void  solrAdd() throws Exception {
+  String baseURL="http://localhost:8080/solr/test";
+  SolrJManager solrJManager=new SolrJManager();
+  solrJManager.solrAdd(baseURL);
 }
+
+//测试solr删除
+@Test
+public void  solrDelete() throws Exception {
+  String baseURL="http://localhost:8080/solr/test";
+  SolrJManager solrJManager=new SolrJManager();
+  solrJManager.solrDelete(baseURL);
+}
+//测试solr查询
+  @Test
+  public void  solrSearch() throws Exception {
+    String baseURL = "http://localhost:8080/solr/test";
+    SolrJManager solrJManager = new SolrJManager();
+ List list= solrJManager.solrSelect(baseURL,"1");
+    System.out.println(list);
+  }
 }
 
