@@ -1,5 +1,6 @@
 package com.entity;
 
+import com.solr.SolrSearchEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -14,6 +15,7 @@ public class JsonResult {
   private  Integer status;
   @ApiModelProperty("查询结果")
   private List<StudentBook> list;
+  private SolrSearchEntity solrSearchEntity;
   public  JsonResult(){
     this.message="没有查到相关信息,请您确认查询关键词是否正确";
     this.status=500;
@@ -30,5 +32,9 @@ public class JsonResult {
  public  JsonResult error(){
     return new JsonResult();
   }
-
+public JsonResult(SolrSearchEntity s){
+  this.status=200;
+  this.message="查找到的结果如下";
+  this.solrSearchEntity=s;
+}
 }
