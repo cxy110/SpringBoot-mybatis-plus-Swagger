@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -86,6 +87,10 @@ public void  solrDelete() throws Exception {
     SolrJManager solrJManager = new SolrJManager();
  List list= solrJManager.solrSelect(baseURL,"1");
     System.out.println(list);
+  }
+  @Test
+  public void  solrSear(){
+    System.out.println(UUID.randomUUID().toString());
   }
 }
 
