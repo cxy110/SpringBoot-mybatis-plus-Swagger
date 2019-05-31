@@ -47,7 +47,7 @@ public class SwaggerConfig {
         .paths(PathSelectors.ant("/indexBook/**"))
         */
         //扫描与正则表达式匹配的接口
-        .paths(PathSelectors.regex("/s.*"))
+        .paths(PathSelectors.regex("/*.*"))
         .build();
   }
 
