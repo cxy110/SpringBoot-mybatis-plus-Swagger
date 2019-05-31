@@ -30,6 +30,12 @@ public class OfficeuploadController {
   //文件上传所对应的一些属性(条件),在applicattion.properties中
   @Autowired
   private MultipartProperties properties;
+
+  /**
+   * word文件上传
+   * @param file
+   * @return
+   */
   @PostMapping("/up")
   public String upload(MultipartFile file) {
     //获取文件名
@@ -56,6 +62,12 @@ String path= properties.getLocation();
 
     return null;
   }
+
+  /**
+   * word文件下载
+   * @param response
+   * @param request
+   */
   @PostMapping("/downDoc")
   public void dowmDoc(HttpServletResponse response, HttpServletRequest request){
      String path=properties.getLocation();
@@ -75,6 +87,11 @@ String path= properties.getLocation();
       e.printStackTrace();
     }
   }
+
+  /**
+   * word转化为pdf
+   * @param response
+   */
   //还没写完
   @PostMapping("/wordToPdf")
   public void wordToPdf(HttpServletResponse response){
