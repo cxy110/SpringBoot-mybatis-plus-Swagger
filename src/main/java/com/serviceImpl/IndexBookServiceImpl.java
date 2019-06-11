@@ -28,7 +28,10 @@ public class IndexBookServiceImpl extends ServiceImpl<IndexBookMapper, IndexBook
   //通过BaseMapper查询
   @Override
   public List openlist(String param) {
-    QueryWrapper<IndexBook>queryWrapper=new QueryWrapper<>();
+
+    QueryWrapper queryWrapper=new QueryWrapper<>();
+    QueryWrapper<IndexBook>queryWrapper1=new QueryWrapper<>();
+
     queryWrapper.eq("teacher",param);
     List list=indexBookMapper.selectList(queryWrapper);
     return list;

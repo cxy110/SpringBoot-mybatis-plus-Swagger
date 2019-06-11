@@ -26,8 +26,6 @@ public class TbBookController {
   @RequestMapping("/select")
   public List find(){
     QueryWrapper queryWrapper=new QueryWrapper<>();
-
-
     queryWrapper.select("name","book_num");
 
      List list = tbBookService.list(queryWrapper);

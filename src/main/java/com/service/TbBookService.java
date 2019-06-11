@@ -17,4 +17,5 @@ import java.util.List;
 public interface TbBookService extends IService<TbBook> {
   @Override
   List list(Wrapper<TbBook> queryWrapper);
+
 }

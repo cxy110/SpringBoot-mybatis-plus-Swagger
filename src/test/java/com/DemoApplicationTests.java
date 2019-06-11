@@ -91,6 +91,6 @@ public void  solrDelete() throws Exception {
   @Test
   public void  solrSear(){
     System.out.println(UUID.randomUUID().toString());
-  }
+    }
 }
 

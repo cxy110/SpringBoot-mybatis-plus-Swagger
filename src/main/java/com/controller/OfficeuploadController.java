@@ -99,6 +99,11 @@ String path= properties.getLocation();
     response.setContentType("application/pdf");
     response.setHeader("Content-disposition","attachment;filename=nihao.pdf");
     try {
+     /* PathAdapter pathAdapter=new PathAdapter();
+     String AS= pathAdapter.getLicensePath("D:/Maven本地仓库/com/github/zxhTom/office-aspose/1.0.0/office-aspose-1.0.0" +
+          ".jar!/license" +
+              ".xml");*/
+
 
       OutputStream output = response.getOutputStream();
     }catch (Exception e){

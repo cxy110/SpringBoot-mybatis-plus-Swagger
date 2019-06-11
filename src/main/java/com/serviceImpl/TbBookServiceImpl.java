@@ -1,10 +1,12 @@
 package com.serviceImpl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.entity.TbBook;
-import com.dao.TbBookMapper;
-import com.service.TbBookService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.dao.TbBookMapper;
+import com.entity.TbBook;
+import com.service.TbBookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,8 +21,12 @@ import java.util.List;
  */
 @Service
 public class TbBookServiceImpl extends ServiceImpl<TbBookMapper, TbBook> implements TbBookService {
+@Autowired
+private  TbBookMapper tbBookMapper;
   @Override
   public List list(Wrapper queryWrapper) {
     return super.list(queryWrapper);
   }
+
+
 }

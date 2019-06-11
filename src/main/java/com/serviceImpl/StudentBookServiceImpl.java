@@ -25,7 +25,7 @@ public class StudentBookServiceImpl extends ServiceImpl<StudentBookMapper, Stude
     /*
     * 通过ModelMapper来进行查询
     * */
-    QueryWrapper<StudentBook> queryWrapper=new QueryWrapper<>();
+    QueryWrapper queryWrapper=new QueryWrapper<>();
     queryWrapper.eq("level",level);
     StudentBook studentBook=new StudentBook();
     List<StudentBook>list= studentBook.selectList(queryWrapper);
