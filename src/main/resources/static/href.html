@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>链接操作</title>
+      <style>
+         .class1 {
+            border-color: red;
+            border-style: solid;
+         }
+      </style>
+   </head>
+   <body>
+      <p align="right">
+         <a id="A" href="#B" a>跳到底部</a>
+      </p>
+      <p>
+         <a href="index1.html">跳转到本地的网页</a><br>
+         <a href="//www.baidu.com/" target="_blank">在新窗口内打开百度</a><br>
+         <a href="//www.jingdong.com/" target="_blank">
+            <img id="class1" src="../image/logo.jpg" alt="你好" title="走向京东" border="1px" height="100" width="100">
+         </a>
+         <a href="//www.tianmao.com/" target="_top">跳出框架点击这里</a>
+      </p>
+      <p>
+         <!--mailto发送的邮箱地址,第一个参数分隔符用?,其他的参数分隔符用&,cc是抄送的邮箱,bcc是密件抄送的邮箱,subject是
+         邮件主题,body是邮件内容,空格用%20代替,有多个邮箱用;分隔,rel="noopener nofeferrer"表示不会打开其他网站-->
+         <a href="mailto:1449826834@qq.com?cc=18616148247@163.com&subject=Hello%20Everyone&body=我用双手成就你的梦想!!!"
+            rel="noopener noreferrer">
+            邮件发送!
+         </a>
+      </p>
+      <p align="right"><a id="B" href="#A">回到顶部</a></p>
+   </body>
+</html>
