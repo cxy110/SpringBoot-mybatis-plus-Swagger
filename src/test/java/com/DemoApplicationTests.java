@@ -2,6 +2,7 @@ package com;
 
 import com.lucene.LuceneIndex;
 import com.lucene.LuceneSearch;
+import com.office.WordTool;
 import com.solr.SolrJManager;
 import com.zxingUtil.QRcodeUtil;
 import org.junit.Test;
@@ -11,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.UUID;
 
@@ -92,5 +94,13 @@ public void  solrDelete() throws Exception {
   public void  solrSear(){
     System.out.println(UUID.randomUUID().toString());
     }
+    @Test
+  public  void ss() throws SQLException, ClassNotFoundException {
+    String path="C:\\Users\\Administrator\\Desktop\\课件.docx";
+      String tname="tb_book";
+      WordTool wordTool = new WordTool();
+      wordTool.addforDocument(path,tname);
+    }
+
 }
 
