@@ -60,8 +60,11 @@ public class ExslDaoChuTool {
       }
      // FileOutputStream out =new FileOutputStream(path);
      // book.write(out);
+      if(rs!=null)
       rs.close();
-      statement.close();
+      if(statement!=null)
+        statement.close();
+     if(connection!=null)
       connection.close();
    //   out.flush();
    //   out.close();
