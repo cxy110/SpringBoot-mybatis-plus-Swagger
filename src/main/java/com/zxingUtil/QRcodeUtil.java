@@ -6,7 +6,6 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import jp.sourceforge.qrcode.util.Color;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -60,7 +59,7 @@ public class QRcodeUtil {
    //对相应的位置画图,形成二维码
    for(int x=0;x<width;x++){
      for(int y=0;y<height;y++){
-       bufferedImage.setRGB(x,y,byteMatrix.get(x,y)? Color.BLACK:Color.WHITE);
+      bufferedImage.setRGB(x,y,byteMatrix.get(x,y)? Color.BLACK:Color.WHITE);
      }
    }
 //画logo
